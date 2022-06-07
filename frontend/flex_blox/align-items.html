@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align Items</title>
+
+    <style>
+        .title{
+            text-align: center;
+        }
+
+        .font{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container{
+            max-width: 500px;
+            border: 1px solid black;
+            margin: 10px;
+            display: flex;
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            flex: 1;
+        }
+
+        .center{
+            align-items: center;
+        }
+
+        .stretch{
+            align-items: stretch;
+        }
+
+        .flex-start{
+            align-items: flex-start;
+        }
+
+        .flex-end{
+            align-items: flex-end;
+        }
+
+        .baseline{
+            align-items: baseline;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+        .central{
+            height: 300px;
+            justify-content: center;
+        }
+
+        .central .item{
+            flex: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="font">
+        <h1 class="title">Align Items</h1>
+        <p class="container item">
+            Trata do alinhamento dos flex itens de acordo com o eixo do container<br>
+            O alinhamento é diferente para quando os itens estão em colunas ou linhas<br>
+            Permite o alinhamento central no eixo vertical<br>
+        </p>
+
+        <h2 class="title"> row </h2>
+        <p>center: alinhamento dos itens ao centro</p>
+        <section class="container center">
+            <div class="item">item 1</div>
+            <div class="item">textinho de teste para ver o tamanho dos itens</div>
+            <div class="item">textinho de teste um pouco maior para percebermos os espaçamentos e tamanho dos itens</div>
+        </section>
+        
+        <p>stretch: padrão, e os flex itens crescem igualmente</p>
+        <section class="container stretch">
+            <div class="item">item 1</div>
+            <div class="item">textinho de teste para ver o tamanho dos itens</div>
+            <div class="item">textinho de teste um pouco maior para percebermos os espaçamentos e tamanho dos itens</div>
+        </section>
+
+        <p>flex-start: alinhamento dos itens no início</p>
+        <section class="container flex-start">
+            <div class="item">item 1</div>
+            <div class="item">textinho de teste para ver o tamanho dos itens</div>
+            <div class="item">textinho de teste um pouco maior para percebermos os espaçamentos e tamanho dos itens</div>
+        </section>
+
+        <p>flex-end: alinhamento dos itens no final</p>
+        <section class="container flex-end">
+            <div class="item">item 1</div>
+            <div class="item">textinho de teste para ver o tamanho dos itens</div>
+            <div class="item">textinho de teste um pouco maior para percebermos os espaçamentos e tamanho dos itens</div>
+        </section>
+
+        <p>baseline: alinhamento de acordo com a linha base da tipografia dos itens</p>
+        <section class="container baseline">
+            <div class="item">item 1</div>
+            <div class="item">textinho de teste para ver o tamanho dos itens</div>
+            <div class="item">textinho de teste um pouco maior para percebermos os espaçamentos e tamanho dos itens</div>
+        </section>
+
+    <h2 class="title"> column </h2>
+        <p>center: alinhamento dos itens ao centro</p>
+        <section class="container center column">
+            <div class="item">item 1</div>
+            <div class="item">textinho de teste para ver o tamanho dos itens</div>
+            <div class="item">textinho de teste um pouco maior para percebermos os espaçamentos e tamanho dos itens</div>
+        </section>
+        
+        <p>stretch: padrão, e os flex itens crescem igualmente</p>
+        <section class="container stretch column">
+            <div class="item">item 1</div>
+            <div class="item">textinho de teste para ver o tamanho dos itens</div>
+            <div class="item">textinho de teste um pouco maior para percebermos os espaçamentos e tamanho dos itens</div>
+        </section>
+
+        <p>flex-start: alinhamento dos itens no início</p>
+        <section class="container flex-start column">
+            <div class="item">item 1</div>
+            <div class="item">textinho de teste para ver o tamanho dos itens</div>
+            <div class="item">textinho de teste um pouco maior para percebermos os espaçamentos e tamanho dos itens</div>
+        </section>
+
+        <p>flex-end: alinhamento dos itens no final</p>
+        <section class="container flex-end column">
+            <div class="item">item 1</div>
+            <div class="item">textinho de teste para ver o tamanho dos itens</div>
+            <div class="item">textinho de teste um pouco maior para percebermos os espaçamentos e tamanho dos itens</div>
+        </section>
+
+        <p>baseline: alinhamento de acordo com a linha base da tipografia dos itens</p>
+        <section class="container baseline column">
+            <div class="item">item 1</div>
+            <div class="item">textinho de teste para ver o tamanho dos itens</div>
+            <div class="item">textinho de teste um pouco maior para percebermos os espaçamentos e tamanho dos itens</div>
+        </section>
+
+        <p> alinhamento central da tela </p>
+        <section class="container central center">
+            <div class="item">escrevendo qualquer coisa para ver como isso irá funcionar na tela, so mais um pouco de nada</div>
+        </section>
+    </div>
+</body>
+</html>

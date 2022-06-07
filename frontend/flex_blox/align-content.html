@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align Content</title>
+    <style>
+        .title{
+            text-align: center;
+        }
+
+        .font{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container{
+            height: 500px;
+            max-width: 500px;
+            border: 1px solid black;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            flex: 1;
+            padding: 0 5px;
+            text-align: center;
+        }
+
+        .center{
+            align-content: center;
+        }
+
+        .stretch{
+            align-content: stretch;
+        }
+
+        .flex-start{
+            align-content: flex-start;
+        }
+
+        .flex-end{
+            align-content: flex-end;
+        }
+
+        .space-between{
+            align-content: space-between;
+        }
+        
+        .space-around{
+            align-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="font">
+        <h1 class="title">Align Content</h1>
+        <section class="container">
+            É a propriedade responsável por tratar o alinhamento das linhas do container em relaçao ao eixo vertical do container
+            <ul>Precusamos que:
+                <li>O container utilize quebra de linha</li>
+                <li>A altura do container seja maior que a soma das linhas dos itens</li>
+            </ul>
+        </section>
+        
+        <p>center: alinhamento dos itens ao centro</p>
+        <section class="container center">
+            <div class="item">Lorem ipsum</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>            
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Loren ipsum</div>
+        </section>
+
+        <p>stretch: padrão, e os flex itens crescem igualmente</p>
+        <section class="container stretch">
+            <div class="item">Lorem ipsum</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>            
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Loren ipsum</div>            
+        </section>
+        
+        <p>flex-start: alinhamento dos itens no início</p>
+        <section class="container flex-start">
+            <div class="item">Lorem ipsum</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>            
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Loren ipsum</div>
+        </section>
+
+        <p>flex-end: alinhamento dos itens no final</p>
+        <section class="container flex-end">
+            <div class="item">Lorem ipsum</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>            
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Loren ipsum</div>
+        </section>
+
+        <p>space-between: espaco igual entre os elementos </p>
+        <section class="container space-between">
+            <div class="item">Lorem ipsum</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>            
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Loren ipsum</div>
+        </section>
+
+        <p>space-around: os espaçmentos do meio são duas vezes maiores que o inicial e final</p>
+        <section class="container space-around">
+            <div class="item">Lorem ipsum</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisci elit</div>            
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Loren ipsum</div>
+        </section>
+    </div>
+</body>
+</html>
