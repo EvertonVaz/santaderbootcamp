@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align self</title>
+
+    <style>
+        .title{
+            text-align: center;
+        }
+
+        .font{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container{
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+            margin: 10px;            
+        }
+
+        .item{
+            background-color: blueviolet;
+            color: white;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+
+        .flex-start{
+            align-self: flex-start;
+        }
+
+        .flex-end{
+            align-self: flex-end;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .direction{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="font">
+        <h1 class="title">Align Self</h1>
+        <section class="container item">
+            É a propriedade que estabelece o alinhamento de modo individual sobre um determinado item
+        </section>
+        
+        <p>auto: valor padrão irá respeitar a definição de apgn-items do container</p>
+        <div class="container">
+            <div class="item auto">AAA</div>
+            <div class="item auto">1234</div>
+            <div class="item auto">Escreve qualquer coisa para gente ver como funcona</div>
+            <div class="item auto">ITEM 4</div>
+        </div>
+        <p>flex-start: inicio do container</p>
+        <div class="container">
+            <div class="item flex-start">AAA</div>
+            <div class="item flex-start">1234</div>
+            <div class="item flex-start">Escreve qualquer coisa para gente ver como funcona</div>
+            <div class="item flex-start">ITEM 4</div>
+        </div>
+            
+        <p>flex-end: final do container</p>
+        <div class="container">
+            <div class="item flex-end">AAA</div>
+            <div class="item flex-end">1234</div>
+            <div class="item flex-end">Escreve qualquer coisa para gente ver como funcona</div>
+            <div class="item flex-end">ITEM 4</div>
+        </div>
+
+        <p>center: relativo ao centro de acordo com o eixo</p>
+        <div class="container">
+            <div class="item center">AAA</div>
+            <div class="item center">1234</div>
+            <div class="item center">Escreve qualquer coisa para gente ver como funcona</div>
+            <div class="item center">ITEM 4</div>
+        </div>
+        <p>stretch: ocupa todo o espaço relativo</p>
+        <div class="container">
+            <div class="item stretch">AAA</div>
+            <div class="item stretch">1234</div>
+            <div class="item stretch">Escreve qualquer coisa para gente ver como funcona</div>
+            <div class="item stretch">ITEM 4</div>
+        </div>
+        <p>baseline: utiliza a linha base da tipografia</p>
+        <div class="container">
+            <div class="item baseline">AAA</div>
+            <div class="item baseline">1234</div>
+            <div class="item baseline">Escreve qualquer coisa para gente ver como funcona</div>
+            <div class="item baseline">ITEM 4</div>
+        </div>
+
+        <h2> row </h2>
+        <p>mix</p>
+        <div class="container">
+            <div class="item flex-start">start</div>
+            <div class="item flex-end">end</div>
+            <div class="item baseline">baseline: Lorem ipsum dolor sit amet.</div>
+            <div class="item auto">ITEM AUTO</div>
+            <div class="item center">center</div>            
+            <div class="item stretch">stretch: Lorem ipsum dolor sit amet. Aut rerum explicabo cum autem aspernatur aut earum dolorum ab dignissimos tempora ut distinctio consequatur ut laudantium repudiandae!</div>            
+        </div>
+
+        <h2> column </h2>
+        <p>mix</p>
+        <div class="container direction">
+            <div class="item flex-start">start</div>
+            <div class="item flex-end">end</div>
+            <div class="item baseline">BASELINE: Lorem ipsum dolor sit amet.</div>
+            <div class="item auto">ITEM AUTO</div>
+            <div class="item center">center</div>            
+            <div class="item stretch">STRETCH: Lorem ipsum dolor sit amet. Aut rerum explicabo cum autem aspernatur aut earum dolorum ab dignissimos tempora ut distinctio consequatur ut laudantium repudiandae!</div>            
+        </div>
+    </div>
+</body>
+</html>

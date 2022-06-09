@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex Grow</title>
+    <style>
+        .title{
+            text-align: center;
+        }
+
+        .font{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container{
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+            margin: 10px;            
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .fg-0{
+            flex-grow: 0;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .fg-2{
+            flex-grow: 2;
+        }
+
+        .fg-3{
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="font">
+        <h1 class="title">Flex Grow</h1>
+        <section class="container">
+            Define a proporcionalidade de crescimentos dos itens, respeitando o tamanho de seus conteúdos internos
+            <br><br>
+            OBS.: não irá funcionar caso tenhamos adicionado justify-content ao nosso flex container
+        </section>
+        
+        <p>flex-grow: 0</p>
+        <div class="container">
+            <div class="item fg-0">A</div>
+            <div class="item fg-0">B</div>
+            <div class="item fg-0">C</div>
+            <div class="item fg-0">D</div>
+            <div class="item fg-0">E</div>
+        </div>
+
+        <p>fkex-grow: 1</p>
+        <div class="container">
+            <div class="item fg-1">A</div>
+            <div class="item fg-1">B</div>
+            <div class="item fg-1">C</div>
+            <div class="item fg-1">D</div>
+            <div class="item fg-1">E</div>
+        </div>
+
+        <p>flex-grow: 2</p>
+        <div class="container">
+            <div class="item fg-2">A</div>
+            <div class="item fg-2">B</div>
+            <div class="item fg-2">C</div>
+            <div class="item fg-2">D</div>
+            <div class="item fg-2">E</div>
+        </div>
+
+        <p>flex-grow: alternados</p>
+        <div class="container">
+            <div class="item fg-0">A</div>
+            <div class="item fg-1">B</div>
+            <div class="item fg-2">C</div>
+            <div class="item fg-3">D</div>
+            
+        </div>
+    </div>
+</body>
+</html>

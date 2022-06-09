@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex Srink</title>
+    <style>
+        .title{
+            text-align: center;
+        }
+
+        .font{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container{
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+            margin: 10px;            
+        }
+
+        .item{
+            background-color: blueviolet;
+            color: white;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .s-1{
+            flex-shrink: 1;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .s-0{
+            flex-shrink: 0;
+        }
+
+        .s-2{
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+
+        .s-3{
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="font">
+        <h1 class="title">Flex Shrink</h1>
+        <section class="container item">
+            É a propriedade que estabelece a capacidade de redução ou compressão do tamanho de um item
+        </section>
+
+        <p>Flex shrink 1, flex grow 1</p>
+        <div class="container">
+            <div class="item s-1 fg-1">A</div>
+            <div class="item s-1 fg-1">Qualquer coisa</div>
+            <div class="item s-1 fg-1">C</div>
+            <div class="item s-1 fg-1">D</div>
+        </div>
+
+        <p>flex-shrink: 0 / flex-basis 100px / flex grow: 1</p>
+        <div class="container">
+            <div class="item s-0 fg-1">A</div>
+            <div class="item s-0 fg-1">B</div>
+            <div class="item s-0 fg-1">C</div>
+            <div class="item s-0 fg-1">D</div>
+            <div class="item s-0 fg-1">E</div>
+        </div>
+
+        <P>flex-shrink 2 / flex-basis 100px</P>
+        <div class="container">
+            <div class="item s-2">A</div>
+            <div class="item s-2">B mais algum texto</div>
+            <div class="item s-2">C</div>
+            <div class="item s-2">D</div>
+            <div class="item s-2">E</div>
+        </div>
+
+        <p>flex-shrink mix / flex-basis 100px / flex-grow 1</p>
+        <div class="container">
+            <div class="item fg-1 s-3">shrink 3 com mais linhas</div>
+            <div class="item s-0 fg-1">shrink 0 / basis 0</div>
+            <div class="item fg-1 s-2">shrink 2</div>
+            <div class="item fg-1 s-2">shrink 2 mais algo</div>
+            <div class="item fg-1 s-3">shrink 3</div>
+            <div class="item s-1">shrink 1</div>
+
+        </div>
+    </div>
+</body>
+</html>
