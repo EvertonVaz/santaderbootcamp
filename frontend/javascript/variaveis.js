@@ -26,7 +26,6 @@ console.log(verificaPalindromo('Luza Rocelina, a namorada do Manuel, leu na moda
 //Output -> [1, 3, 0, 0, 0, 33, 23, 0]
 //Input -> []
 //Output -> -1
-
 console.log('\n')
 console.log('Atividade 2'+'\n')
 
