@@ -26,6 +26,7 @@ function verificaMedia(alunos, mediaFinal = 6){
     aprovados = []
     var nome = ({nome}) => nome
     var nota = ({nota}) => nota
+	
     for(i in alunos){
         if(nota(alunos[i]) >= mediaFinal){
             aprovados.push(nome(alunos[i]))

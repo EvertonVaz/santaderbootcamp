@@ -1,17 +1,21 @@
-console.log('\n')
-console.log('Atividade 2'+'\n')
+function getAdmins(map) {
+    let admins = []
 
-function trocarElementosPares(listaNumeros){    
-    if (typeof listaNumeros == 'undefined'){
-        return 'Insira uma lista de numeros'        
-    } else if(listaNumeros.length === 0){    
-        return -1
-    } else {
-        for(let i=0; i < listaNumeros.length; i++){
-            pares = listaNumeros[i] % 2 == 0 ? listaNumeros[i] = 0: false
+    for ([key, value] of map) {
+        if (value === 'ADMIN') {
+            admins.push(key)
         }
-        return listaNumeros
-    }    
+    }
+    return admins
 }
 
-console.log(trocarElementosPares())
+const users = new Map()
+
+users.set('Everton', 'ADMIN')
+users.set('Juliana', 'USER')
+users.set('Angela', 'USER')
+users.set('Gabriel', 'USER')
+users.set('Giovanna', 'USER')
+users.set('Vitor', 'ADMIN')
+
+console.log(getAdmins(users))

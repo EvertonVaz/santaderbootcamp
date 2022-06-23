@@ -1,6 +1,7 @@
 // Atividade 1
 //Verifique, de duas maneiras diferentes entre si, se uma String é um palíndromo.
 //Palíndromo: frase ou palavra que se pode ler, indiferentemente, da esquerda para a direita ou vice-versa (ex.: raiar, ama, ovo, radar)
+
 console.log('\n')
 console.log('Atividade 1'+'\n')
 
@@ -26,6 +27,7 @@ console.log(verificaPalindromo('Luza Rocelina, a namorada do Manuel, leu na moda
 //Output -> [1, 3, 0, 0, 0, 33, 23, 0]
 //Input -> []
 //Output -> -1
+
 console.log('\n')
 console.log('Atividade 2'+'\n')
 
