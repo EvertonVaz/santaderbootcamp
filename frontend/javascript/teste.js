@@ -1,21 +1,12 @@
-function getAdmins(map) {
-    let admins = []
 
-    for ([key, value] of map) {
-        if (value === 'ADMIN') {
-            admins.push(key)
-        }
-    }
-    return admins
+
+let line = ['6','6','6','6']// lines.shift().split(' ');
+let soma = 0
+
+//TODO: Complete os espaços em branco com uma possível solução para o desafio
+
+for(i=0;i<  line.length   ;i++){
+  let transfor = parseInt(line[ i  ])
+  soma = soma + transfor
 }
-
-const users = new Map()
-
-users.set('Everton', 'ADMIN')
-users.set('Juliana', 'USER')
-users.set('Angela', 'USER')
-users.set('Gabriel', 'USER')
-users.set('Giovanna', 'USER')
-users.set('Vitor', 'ADMIN')
-
-console.log(getAdmins(users))
+console.log(soma-3)
