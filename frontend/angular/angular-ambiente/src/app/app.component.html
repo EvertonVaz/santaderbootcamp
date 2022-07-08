@@ -1,4 +1,55 @@
 <h1 class="text-success text-center">Live angular derivativas</h1>
-<div [ngStyle]="{background: count < 5? 'red' : 'green'}">
+
+<!-- Diretivas de atributo -->
+<div 
+    [ngStyle]="{background: count < 5? 'red' : 'green'}"
+    [ngClass]="{custom: count > 5}"
+     >
   <h3 class="text-center">Contador: {{ count }}</h3>
+</div>
+
+<!-- Diretivas Estruturais -->
+<div *ngIf="count > 7 else menor">
+  <h3 class="text-center"> O contador passou de 7! </h3>
+</div>
+<ng-template #menor>
+  <h3 class="text-center">O contador é menor que 7!</h3>
+</ng-template>
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-3">
+  <li class="list-group-item text-center" *ngSwitchCase="3">É IGUAL A 3</li>
+  <li class="list-group-item text-center" *ngSwitchCase="5">É IGUAL A 5</li>
+  <li class="list-group-item text-center" *ngSwitchCase="8">É IGUAL A 8</li>
+  <li class="list-group-item text-center" *ngSwitchDefault="">DEFAULT</li>
+</ul>
+
+<ul class="list-group mx-auto col-3">
+  <li 
+  *ngFor="let pessoa of pessoas" 
+  class="list-group-item text-center"
+  >
+  O nome da pessoa é {{ pessoa.nome }} {{pessoa.sobrenome}}
+  </li>
+</ul>
+
+
+<!-- Data Binding -->
+<div class="text-center">
+  <button class="btn btn-success" (click)="clicou(nome)">Clique</button>
+</div>
+
+<!-- two way data binding -->
+<div class="col-3 mx-auto">
+  <input 
+    type="text" 
+    class="from-control" 
+    placeholder="Digite aqui"
+    [(ngModel)]="text"
+  >
+  <h4>Saida: {{ text }}</h4>
+</div>
+
+<!-- DIRETIVA -->
+<div class="col-3 mx-auto">
+  <h3 appMarcaTexto corDeFundo="black" corDeTexto="white">{{ nome }}</h3>
 </div>
