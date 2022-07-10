@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { PeopleService } from './shared/services/people.services';
 
+
+// C:\Users\etova\Desktop\Cursos\santaderbootcamp\frontend\angular\angular-ambiente\src\app\app.component.css
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,27 +13,29 @@ export class AppComponent implements OnInit {
 
   nome = 'Everton'
 
-  text = ''
-  
-  pessoas = [
-    {nome: 'teste1', sobrenome: 'ngFor'},
-    {nome: 'teste2', sobrenome: 'ngFor'},
-    {nome: 'teste3', sobrenome: 'ngFor'},
-    {nome: 'teste4', sobrenome: 'ngFor'},
-  ]
+  input_texto = ''
+  pessoas = [{firstName: '', lastName: '', age:0}]
 
-  constructor () { };
+  constructor (private peopleService: PeopleService) {}
 
   ngOnInit(): void {
+    this.getPeople();
+
     let interval = setInterval(() => {
       this.count++
       if(this.count === 10){
         clearInterval(interval)
       }
-    }, 1000)
+    }, 1000)   
   }
 
   clicou (nome: string): void {
     console.log('Clicou em mim', nome)
+  }
+
+  getPeople() {
+    this.peopleService.getPeople().subscribe(people => {
+      this.pessoas = people;
+    })
   }
 }

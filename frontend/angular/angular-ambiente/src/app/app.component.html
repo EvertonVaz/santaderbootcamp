@@ -28,7 +28,7 @@
   *ngFor="let pessoa of pessoas" 
   class="list-group-item text-center"
   >
-  O nome da pessoa é {{ pessoa.nome }} {{pessoa.sobrenome}}
+  O nome da pessoa é {{ pessoa.firstName }} {{pessoa.lastName}}
   </li>
 </ul>
 
@@ -44,9 +44,9 @@
     type="text" 
     class="from-control" 
     placeholder="Digite aqui"
-    [(ngModel)]="text"
+    [(ngModel)]="input_texto"
   >
-  <h4>Saida: {{ text }}</h4>
+  <h4>Saida: {{ input_texto }}</h4>
 </div>
 
 <!-- DIRETIVA -->
