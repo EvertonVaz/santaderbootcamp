@@ -5,7 +5,8 @@ import { UsersListComponent } from './shared/component/pages/users/users-list/us
 
 const routes: Routes = [
   { path: '', component: UsersListComponent },
-  { path: 'form', component: UserFormComponent }
+  { path: 'form', component: UserFormComponent },
+  { path: 'form/:id', component: UserFormComponent }
 ];
 
 @NgModule({
