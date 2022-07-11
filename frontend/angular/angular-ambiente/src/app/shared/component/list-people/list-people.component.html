@@ -1,0 +1,11 @@
+<p class="text-center">list-people works!</p>
+<p class="text-center">ngFor</p>
+<ul class="list-group mx-auto col-3">
+  <li 
+  *ngFor="let pessoa of pessoas" 
+  class="list-group-item text-center"
+  >
+  O nome da pessoa é {{ pessoa.firstName }} {{pessoa.lastName}}
+  </li>
+</ul>
+

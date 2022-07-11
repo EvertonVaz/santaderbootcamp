@@ -1,6 +1,7 @@
-<h1 class="text-success text-center">Live angular derivativas</h1>
+<h1 class="text-success text-center">Angular derivativas</h1>
 
 <!-- Diretivas de atributo -->
+<p class="text-center">ngStyle e ngClass</p>
 <div 
     [ngStyle]="{background: count < 5? 'red' : 'green'}"
     [ngClass]="{custom: count > 5}"
@@ -9,6 +10,7 @@
 </div>
 
 <!-- Diretivas Estruturais -->
+<p class="text-center">ngIf</p>
 <div *ngIf="count > 7 else menor">
   <h3 class="text-center"> O contador passou de 7! </h3>
 </div>
@@ -16,6 +18,7 @@
   <h3 class="text-center">O contador é menor que 7!</h3>
 </ng-template>
 
+<p class="text-center">ngSwitch</p>
 <ul [ngSwitch]="count" class="list-group mx-auto col-3">
   <li class="list-group-item text-center" *ngSwitchCase="3">É IGUAL A 3</li>
   <li class="list-group-item text-center" *ngSwitchCase="5">É IGUAL A 5</li>
@@ -23,22 +26,16 @@
   <li class="list-group-item text-center" *ngSwitchDefault="">DEFAULT</li>
 </ul>
 
-<ul class="list-group mx-auto col-3">
-  <li 
-  *ngFor="let pessoa of pessoas" 
-  class="list-group-item text-center"
-  >
-  O nome da pessoa é {{ pessoa.firstName }} {{pessoa.lastName}}
-  </li>
-</ul>
-
+<app-list-people></app-list-people>
 
 <!-- Data Binding -->
+<p class="text-center">Data biding</p>
 <div class="text-center">
   <button class="btn btn-success" (click)="clicou(nome)">Clique</button>
 </div>
 
 <!-- two way data binding -->
+<p class="text-center">two way data biding</p>
 <div class="col-3 mx-auto">
   <input 
     type="text" 
@@ -50,6 +47,16 @@
 </div>
 
 <!-- DIRETIVA -->
+<p class="text-center">Diretivas</p>
 <div class="col-3 mx-auto">
   <h3 appMarcaTexto corDeFundo="black" corDeTexto="white">{{ nome }}</h3>
+</div>
+
+<div class="container my-5">
+  <div class="row d-flex align-items-center justify-content-center">
+    <h1 class="text-center">PERSONAGENS DO RICK AND MORY</h1>
+    <div class="text-center justfy-content-center align-items-center">
+      <app-list-api></app-list-api>  
+    </div>
+  </div>
 </div>
