@@ -1,0 +1,15 @@
+<h1 [class.text-red]="textRed">{{ retornaNome() }}</h1>
+<div>
+    <img [src]="imageUrl" [alt]="imageDesc" (click)="clicouImagem()">
+</div>
+<div>
+    <input class="form-control" [(ngModel)]="textInput">
+    <p class="text-default" [style.color]="bgColor">{{ textInput }}</p>
+    <app-button btnText="{{buttonText}}" (click)="destroyComponent()" btnType="btn-danger" (click)="clicouBotao(textInput)"></app-button>
+    <app-button (click)="mudaNomeBotao()" btnType="btn-success" btnText="{{mudarNome}}"></app-button>
+    <app-button (clickChildren)="clicouNoFilho($event)" (click)="incrementa()"></app-button>
+</div>
+
+<div>
+    <app-life-cycle [number]="number" *ngIf="!destroi"></app-life-cycle>
+</div>

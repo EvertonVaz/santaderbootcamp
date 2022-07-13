@@ -5,3 +5,7 @@ export interface User {
     idade: number,
     profissao: string
 }
+
+export interface Result {
+    result: [User]
+}

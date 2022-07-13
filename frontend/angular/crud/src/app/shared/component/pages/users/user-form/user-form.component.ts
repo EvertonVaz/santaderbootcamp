@@ -21,7 +21,6 @@ export class UserFormComponent implements OnInit {
     private actRoute: ActivatedRoute,
     private router: Router) { 
     this.userForm = this.fb.group({
-      id: 0,
       nome: '',
       sobrenome: '',
       idade: '',
@@ -37,11 +36,11 @@ export class UserFormComponent implements OnInit {
       if(this.userId !== null) {
         this.userService.getUser(this.userId).subscribe(result => {
           this.userForm.patchValue({
-            id: result.id,
-            nome: result.nome,
-            sobrenome: result.sobrenome,
-            idade: result.idade,
-            profissao: result.profissao
+            id: result.result[0].id,
+            nome: result.result[0].nome,
+            sobrenome: result.result[0].sobrenome,
+            idade: result.result[0].idade,
+            profissao: result.result[0].profissao
           })
         })
       }
@@ -51,14 +50,14 @@ export class UserFormComponent implements OnInit {
 
   getUsers() {
     this.userService.getUsers().subscribe(response => {
-      this.users = response
+      this.users = response.result
     })
   }
        
   createUser(){
     this.userForm.get('id')?.patchValue(this.users.length + 1)
     this.userService.postUser(this.userForm.value).subscribe(result => {
-      console.log(`Usuário ${result.nome} cadastrado com sucesso`)
+      console.log(`Usuário ${result.result[0].nome} cadastrado com sucesso`)
     }, (err) => {
 
     }, () => {

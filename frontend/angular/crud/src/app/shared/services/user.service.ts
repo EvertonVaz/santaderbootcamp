@@ -1,13 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User } from '../models/user';
+import { User, Result } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  apiUrl = 'https://sheet.best/api/sheets/fe335003-1d0a-4d84-8319-66e2a293e536'
+  apiUrl = 'https://api.sheety.co/2fdb825e83a9b2cd0079191a4489db32/usuarios/result'
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -17,27 +17,27 @@ export class UserService {
 
   // C.R.U.D - CREATE, READ, UPDATE, DELETE
   // READ - Retorn a lista de usuarios
-  getUsers(): Observable<User[]> {
-    return this.httpClient.get<User[]>(this.apiUrl)
+  getUsers(): Observable<Result> {
+    return this.httpClient.get<Result>(this.apiUrl)
   }
 
   // POST(CREATE): Salva um novo usuario
-  postUser(user: User): Observable<User> {
-    return this.httpClient.post<User>(this.apiUrl, user, this.httpOptions)
+  postUser(user: User): Observable<Result> {
+    return this.httpClient.post<Result>(this.apiUrl, user, this.httpOptions)
   }
 
   // DELETE: Exclui o usuario
-  deleteUser(id: number): Observable<User> {
-    return this.httpClient.delete<User>(`${this.apiUrl}/id/${id}`)
+  deleteUser(id: number): Observable<Result> {
+    return this.httpClient.delete<Result>(`${this.apiUrl}/${id}`)
   }
 
   // UPDATE
-  updateUser(id: string, user:User): Observable<User> {
-    return this.httpClient.put<User>(`${this.apiUrl}/id/${id}`, user, this.httpOptions);
+  updateUser(id: string, user:User): Observable<Result> {
+    return this.httpClient.put<Result>(`${this.apiUrl}/${id}`, user, this.httpOptions);
   }
 
   // retorna um unico usuario
-  getUser(id: string) :Observable <User> {
-    return this.httpClient.get<User>(`${this.apiUrl}/id/${id}`)
+  getUser(id: string) :Observable <Result> {
+    return this.httpClient.get<Result>(`${this.apiUrl}/${id}`)
   }
 }
