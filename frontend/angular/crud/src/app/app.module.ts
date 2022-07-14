@@ -18,7 +18,9 @@ import { MatCardModule } from '@angular/material/card'
 import { MatGridListModule } from '@angular/material/grid-list'
 import {MatIconModule} from '@angular/material/icon'
 import {MatListModule} from '@angular/material/list';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PipesComponent } from './shared/component/pages/pipes/pipes.component'
+import { UpperCasePipe } from '@angular/common';
 
 MatCardModule
 
@@ -32,7 +34,8 @@ MatCardModule
     ButtonComponent,
     LifeCycleComponent,
     TodoItemComponent,
-    TodoListComponent
+    TodoListComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,7 @@ MatCardModule
     MatListModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [UpperCasePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

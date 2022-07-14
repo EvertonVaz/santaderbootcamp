@@ -1,0 +1,16 @@
+<div class="card-group my-1 h-50">
+    <div class="card shadow-sn">
+        <img class="bd-placeholder-img card-img-top" width="100%" src="{{livro.imageLinks.smallThumbnail}}">
+        <div class="card-body">
+            <h5 class="card-title">Título: {{livro.title}}</h5>
+            <p class="card-text">Autor: {{livro.authors[0]}}</p>
+            <p class="card-text overflow-auto">Descrição: {{livro.description}}</p>     
+            
+
+            <div class="btn-group">
+                <button class="btn btn-sb btn-primary">Comprar</button>
+                <button class="btn btn-sb btn-outline-primary">Detalhes</button>
+            </div>
+        </div>
+    </div>
+</div>
