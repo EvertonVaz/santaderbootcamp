@@ -1,4 +1,4 @@
-package exercicios;
+package metodos;
 
 public class Calculadora {
 

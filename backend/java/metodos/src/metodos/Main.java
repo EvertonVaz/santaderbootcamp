@@ -1,4 +1,4 @@
-package exercicios;
+package metodos;
 
 public class Main {
 
@@ -29,5 +29,10 @@ public class Main {
         System.out.println(Quadrilatero.area(5d,5d));
         System.out.println(Quadrilatero.area(7,8,9));
         System.out.println(Quadrilatero.area(5f,5f));
+
+        int i1 = 10;
+        float f1 = 4.5f;
+        String c1 = "x";
+        boolean b1 = true;
     }
 }

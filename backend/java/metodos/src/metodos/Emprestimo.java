@@ -1,4 +1,4 @@
-package exercicios;
+package metodos;
 
 public class Emprestimo {
     public static void calcular(double valor, double taxa, int parcelas){

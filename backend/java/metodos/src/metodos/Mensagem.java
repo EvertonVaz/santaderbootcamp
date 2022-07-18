@@ -1,4 +1,4 @@
-package exercicios;
+package metodos;
 
 public class Mensagem {
     public static void obterMensagem(int horas){
