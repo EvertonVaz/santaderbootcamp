@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.Map;
+
 public abstract class Conta implements IConta{
     private static int SEQUENCIAL = 1;
     private static final int AGENCIA_PADRAO = 0001;

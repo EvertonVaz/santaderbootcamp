@@ -36,6 +36,6 @@ public class Banco {
         for (Conta conta: contas){
             set.add(conta.getCliente().nome);
         }
-        System.out.println(set.toString());
+        set.forEach(System.out::println);
     }
 }

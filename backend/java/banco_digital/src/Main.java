@@ -30,6 +30,8 @@ public class Main {
         cp1.imprimirExtrato();
         cc2.imprimirExtrato();
         cp2.imprimirExtrato();
+
+        System.out.println("=== Clientes cadastrados ===");
         banco.imprimirClientes();
 
     }
